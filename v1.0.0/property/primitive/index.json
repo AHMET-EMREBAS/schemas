@@ -2,12 +2,26 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "type": "object",
   "oneOf": [
-    { "$ref": "./boolean.json" },
-    { "$ref": "./string.json" },
-    { "$ref": "./date.json" },
-    { "$ref": "./number.json" },
-    { "$ref": "./upc.json" },
-    { "$ref": "./email.json" },
-    { "$ref": "./password.json" }
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/primitive/boolean.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/primitive/string.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/primitive/date.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/primitive/number.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/primitive/upc.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/primitive/email.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/primitive/password.json"
+    }
   ]
 }

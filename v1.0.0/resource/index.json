@@ -2,5 +2,12 @@
   "$schema": "http://json-schema.org/draft-07/schema",
   "title": "Select Resouce Shema",
   "type": "object",
-  "oneOf": [{ "$ref": "./basic.json" }, { "$ref": "./single.json" }]
+  "oneOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/resource/basic.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/resource/single.json"
+    }
+  ]
 }

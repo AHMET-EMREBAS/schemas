@@ -8,7 +8,7 @@
       "default": "many-to-one"
     },
     "target": {
-      "$ref": "../../name/resource-name.json"
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/name/resource-name.json"
     },
     "onDelete": {
       "enum": ["RESTRICT", "CASCADE", "SET NULL", "DEFAULT", "NO ACTION"],

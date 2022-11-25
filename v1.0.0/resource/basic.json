@@ -6,7 +6,7 @@
       "const": "basic-resource"
     },
     "properties": {
-      "$ref": "./properties.json"
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/resource/properties.json"
     },
     "required": {
       "type": "array",

@@ -4,9 +4,17 @@
   "title": "PropertySchemaV2.0.0",
   "description": "Resource property schema to define and describe the property.",
   "oneOf": [
-    { "$ref": "./primitive/index.json" },
-    { "$ref": "./relation/index.json" },
-    { "$ref": "./timestamp/index.json" },
-    { "$ref": "./id/index.json" }
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/primitive/index.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/relation/index.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/timestamp/index.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/id/index.json"
+    }
   ]
 }

@@ -1,5 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema",
   "type": "object",
-  "oneOf": [{ "$ref": "./id.json" }, { "$ref": "./uuid.json" }]
+  "oneOf": [
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/id/id.json"
+    },
+    {
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/id/uuid.json"
+    }
+  ]
 }

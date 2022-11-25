@@ -3,5 +3,5 @@
   "$id": "ResourceSchemaV1.0.0",
   "title": "ResourceSchemaV1.0.0",
   "description": "Place to define and describe your resource properties, attributes, behaviours, and features etc.",
-  "$ref": "./resource/index.json"
+  "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/resource/index.json"
 }

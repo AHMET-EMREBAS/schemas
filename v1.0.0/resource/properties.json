@@ -5,7 +5,7 @@
   "type": "object",
   "patternProperties": {
     "^[a-z]{1}[a-zA-Z]{1,}$": {
-      "$ref": "../property/index.json"
+      "$ref": "https://raw.githubusercontent.com/AHMET-EMREBAS/schemas/main/v1.0.0/property/index.json"
     }
   }
 }
