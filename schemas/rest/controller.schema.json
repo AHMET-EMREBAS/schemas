@@ -37,6 +37,9 @@
     "definitions": {
         "common": {
             "properties": {
+                "security": {
+                    "$ref": "./security.schema.json"
+                },
                 "operationId": {
                     "$ref": "../names/operation-id.schema.json"
                 },

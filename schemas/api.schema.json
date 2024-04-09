@@ -1,17 +1,15 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "ApiV1",
-    "$id": "ApiV1",
+    "title": "Api",
+    "$id": "Api",
     "properties": {
         "name": {
+            "description": "Project name",
             "type": "string"
         },
         "info": {
+            "description": "Project information",
             "$ref": "./info.schema.json"
-        },
-        "paths": {
-            
-        },
-        "entities": {}
+        }
     }
 }

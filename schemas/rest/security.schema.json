@@ -1,0 +1,48 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Security",
+    "$id": "Security",
+    "description": "Security",
+    "oneOf": [
+        {
+            "properties": {
+                "public": {
+                    "type": "boolean",
+                    "const": true
+                }
+            }
+        },
+        {
+            "properties": {
+                "name": {
+                    "description": "Security name",
+                    "type": "string"
+                },
+                "parameters": {
+                    "patternProperties": {
+                        "[a-z-]{1,}": {
+                            "properties": {
+                                "type": {
+                                    "enum": [
+                                        "permission",
+                                        "role",
+                                        "jwt",
+                                        "sso",
+                                        "credentials"
+                                    ]
+                                },
+                                "in": {
+                                    "enum": [
+                                        "header",
+                                        "body",
+                                        "query"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}
