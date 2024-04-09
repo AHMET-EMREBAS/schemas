@@ -1,0 +1,14 @@
+{
+  "name": "@webpackages/schemas",
+  "version": "1.0.0",
+  "description": "Create single source of truth file",
+  "scripts": {
+    "postinstall": "node init.js"
+  },
+  "keywords": [
+    "SSOT",
+    "OpenAPI"
+  ],
+  "author": "Ahmet Emrebas",
+  "license": "MIT"
+}

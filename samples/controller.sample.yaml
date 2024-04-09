@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=./../schemas/rest/controller.schema.json
+api/users:
+  get:
+    parameters:
+      query:
+        type: Query
+        in: query

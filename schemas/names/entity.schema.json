@@ -10,6 +10,14 @@
         "Permission",
         "Category",
         "TimestampEntity",
-        "IdEntity"
+        "IdEntity",
+        "Info",
+        "Notification",
+        "Error",
+        "Warning",
+        "Redirect",
+        "UpdateResult",
+        "DeleteResult",
+        "Query"
     ]
 }

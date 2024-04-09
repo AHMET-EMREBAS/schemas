@@ -1,0 +1,119 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Response",
+    "id": "Response",
+    "properties": {
+        "info": {
+            "patternProperties": {
+                "[0-9]{3}": {
+                    "$ref": "#/definitions/response-body"
+                }
+            },
+            "propertyNames": {
+                "enum": [
+                    100,
+                    101,
+                    102,
+                    103,
+                    104
+                ]
+            }
+        },
+        "success": {
+            "patternProperties": {
+                "[0-9]{3}": {
+                    "$ref": "#/definitions/response-body"
+                }
+            },
+            "propertyNames": {
+                "enum": [
+                    200,
+                    201,
+                    202,
+                    203,
+                    204
+                ]
+            }
+        },
+        "redirect": {
+            "patternProperties": {
+                "[0-9]{3}": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/response-body"
+                        },
+                        {
+                            "properties": {
+                                "redirect": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "propertyNames": {
+                "enum": [
+                    300,
+                    301,
+                    302,
+                    303,
+                    304
+                ]
+            }
+        },
+        "clientError": {
+            "patternProperties": {
+                "[0-9]{3}": {
+                    "$ref": "#/definitions/response-body"
+                }
+            },
+            "propertyNames": {
+                "enum": [
+                    400,
+                    401,
+                    402,
+                    403,
+                    404
+                ]
+            }
+        },
+        "serverError": {
+            "patternProperties": {
+                "[0-9]{3}": {
+                    "$ref": "#/definitions/response-body"
+                }
+            },
+            "propertyNames": {
+                "enum": [
+                    500,
+                    501,
+                    502,
+                    503,
+                    504
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "response-body": {
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "body": {
+                    "properties": {
+                        "type": {
+                            "$ref": "./../names/entity.schema.json"
+                        },
+                        "isArray": {
+                            "type": "boolean",
+                            "const": true
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            }
+        }
+    }
+}

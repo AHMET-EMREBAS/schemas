@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Security",
+    "$id": "Security",
+    "description": "Security",
+    "properties": {
+        "permissions": {
+            "$ref": "./names/permissions.schema.json"
+        },
+        "roles": {
+            "$ref": "./names/roles.schema.json"
+        }
+    }
+}

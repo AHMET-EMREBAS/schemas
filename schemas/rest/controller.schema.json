@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Controller",
+    "$id": "Controller",
+    "patternProperties": {
+        "[a-zA-Z-\/]{0,}": {
+            "properties": {
+                "get": {
+                    "$ref": "#/definitions/common"
+                },
+                "post": {
+                    "$ref": "#/definitions/common"
+                },
+                "put": {
+                    "$ref": "#/definitions/common"
+                },
+                "delete": {
+                    "$ref": "#/definitions/common"
+                }
+            },
+            "additionalProperties": false
+        }
+    },
+    "definitions": {
+        "common": {
+            "properties": {
+                "parameters": {
+                    "patternProperties": {
+                        "[a-zA-Z]{1,}": {
+                            "$ref": "./parameter.schema.json"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

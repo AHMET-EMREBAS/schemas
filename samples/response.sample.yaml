@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=./../schemas/rest/response.schema.json
+info:
+  101:
+    description: some
+    body:
+      type: Info
+
+  102:
+    description: Notification response
+    body:
+      type: Notification
+
+  103:
+    description: Warning response
+    body:
+      type: Warning
+
+success:
+  200:
+    description: Return array of categories
+    body:
+      type: Category
+      isArray: true
+
+  201:
+    description: Return the created category
+    body:
+      type: Category
+
+  202:
+    description: For successful update
+    body:
+      type: UpdateResult
+
+  203:
+    description: For successful relation update
+    body:
+      type: IdEntity
+
+  204:
+    description: For successful delete
+    body:
+      type: DeleteResult
