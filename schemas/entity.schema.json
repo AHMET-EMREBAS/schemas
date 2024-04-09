@@ -1,0 +1,62 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "id": "Database Entity",
+    "title": "Database Entity",
+    "properties": {
+        "abstract": {
+            "description": "Is enity abstract class such us BaseEntity that contains common columns?",
+            "type": "boolean",
+            "const": true
+        },
+        "name": {
+            "$ref": "#/definitions/entity-names"
+        },
+        "description": {
+            "type": "string"
+        },
+        "columns": {
+            "patternProperties": {
+                "[a-zA-Z]{1,}": {
+                    "$ref": "./column.schema.json"
+                }
+            },
+            "propertyNames": {
+                "$ref": "./names/property.schema.json"
+            }
+        },
+        "relations": {
+            "patternProperties": {
+                "[a-zA-Z]{1,}": {
+                    "$ref": "./relation.schema.json"
+                }
+            },
+            "propertyNames": {
+                "$ref": "./names/property.schema.json"
+            }
+        },
+        "required": {
+            "type": "array",
+            "title": "Required Columns",
+            "items": {
+                "$ref": "./names/property.schema.json"
+            }
+        },
+        "unique": {
+            "type": "array",
+            "title": "Unique Columns",
+            "items": {
+                "$ref": "./names/property.schema.json"
+            }
+        },
+        "extends": {
+            "description": "Extends the entity.",
+            "$ref": "#/definitions/entity-names"
+        }
+    },
+    "additionalProperties": false,
+    "definitions": {
+        "entity-names": {
+            "$ref": "./names/entity.schema.json"
+        }
+    }
+}

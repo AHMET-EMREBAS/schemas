@@ -1,0 +1,76 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Column",
+    "title": "Column",
+    "properties": {
+        "type": {
+            "description": "Property type",
+            "$ref": "#/definitions/types"
+        },
+        "target": {
+            "description": "The coresponding object.",
+            "$ref": "#/definitions/entity-names"
+        },
+        "description": {
+            "description": "Property description",
+            "type": "string"
+        },
+        "label": {
+            "description": "Property description as label",
+            "type": "string"
+        },
+        "primary": {
+            "description": "Is property primary column",
+            "properties": {
+                "generated": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "items": {
+            "$ref": "#/definitions/self"
+        },
+        "validation": {
+            "description": "Input validation options",
+            "$ref": "#/definitions/validation"
+        },
+        "inputType": {
+            "description": "Input type",
+            "$ref": "./names/input-types.schema.json"
+        },
+        "notInCreate": {
+            "description": "Exclude the property from create.",
+            "type": "boolean",
+            "const": true
+        },
+        "notInUpdate": {
+            "description": "Exclude the property from update.",
+            "type": "boolean",
+            "const": true
+        },
+        "createDateColumn": {
+            "type": "boolean"
+        },
+        "updateDateColumn": {
+            "type": "boolean"
+        },
+        "deleteDateColumn": {
+            "type": "boolean"
+        }
+    },
+    "additionalProperties": false,
+    "definitions": {
+        "validation": {
+            "$ref": "./validation.schema.json"
+        },
+        "types": {
+            "$ref": "./names/types.schema.json"
+        },
+        "entity-names": {
+            "$ref": "./names/entity.schema.json"
+        },
+        "self": {
+            "$ref": "./column.schema.json"
+        }
+    }
+}

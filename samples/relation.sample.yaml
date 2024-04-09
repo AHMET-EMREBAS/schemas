@@ -1,0 +1,3 @@
+# yaml-language-server: $schema=../schemas/relation.schema.json
+target: Category
+type: One

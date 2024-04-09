@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=./../schemas/entity.schema.json
+name: Product
+description: Entity Description
+extends: TimestampEntity
+columns:
+  id:
+    type: number
+    primary:
+      generated: true
+
+  createdAt:
+    createDateColumn: true
+
+  updatedAt:
+    createDateColumn: true
+
+  deletedAt:
+    createDateColumn: true
+
+  name:
+    type: string
+    inputType: text
+    label: Product Name
+    validation:
+      type: string
+      minLength: 3
+      maxLength: 30
+
+relations:
+  category:
+    type: One
+    target: Category
+    inputType: select
+
+required:
+  - name
+  - category
+
+unique:
+  - name

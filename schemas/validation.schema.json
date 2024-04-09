@@ -1,0 +1,155 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Property Validation",
+    "title": "Property Validation",
+    "$ref": "#/definitions/oneof",
+    "definitions": {
+        "string": {
+            "properties": {
+                "type": {
+                    "const": "string"
+                },
+                "minLength": {
+                    "type": "number",
+                    "minimum": 1
+                },
+                "maxLength": {
+                    "type": "number",
+                    "minimum": 1
+                },
+                "example": {
+                    "type": "string"
+                },
+                "default": {
+                    "type": "string"
+                },
+                "enum": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "number": {
+            "properties": {
+                "type": {
+                    "const": "number"
+                },
+                "minimum": {
+                    "type": "number"
+                },
+                "maximum": {
+                    "type": "number"
+                },
+                "example": {
+                    "type": "number"
+                },
+                "default": {
+                    "type": "number"
+                },
+                "enum": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                }
+            },
+            "additionalProperties": false
+        },
+        "boolean": {
+            "properties": {
+                "type": {
+                    "const": "boolean"
+                },
+                "example": {
+                    "type": "boolean"
+                },
+                "default": {
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": false
+        },
+        "date": {
+            "properties": {
+                "type": {
+                    "const": "date"
+                },
+                "example": {
+                    "type": "string"
+                },
+                "default": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        },
+        "object": {
+            "properties": {
+                "type": {
+                    "const": "object"
+                },
+                "target": {
+                    "$ref": "#/definitions/entity-names"
+                },
+                "example": {
+                    "type": "object"
+                },
+                "default": {
+                    "type": "object"
+                }
+            },
+            "additionalProperties": false
+        },
+        "array": {
+            "properties": {
+                "type": {
+                    "const": "array"
+                },
+                "items": {
+                    "$ref": "#/definitions/oneof"
+                },
+                "example": {
+                    "type": "array"
+                },
+                "default": {
+                    "type": "array"
+                },
+                "minLength": {
+                    "type": "number"
+                },
+                "maxLength": {
+                    "type": "number"
+                }
+            },
+            "additionalProperties": false
+        },
+        "oneof": {
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/string"
+                },
+                {
+                    "$ref": "#/definitions/number"
+                },
+                {
+                    "$ref": "#/definitions/boolean"
+                },
+                {
+                    "$ref": "#/definitions/date"
+                },
+                {
+                    "$ref": "#/definitions/object"
+                },
+                {
+                    "$ref": "#/definitions/array"
+                }
+            ]
+        },
+        "entity-names": {
+            "$ref": "./names/entity.schema.json"
+        }
+    }
+}

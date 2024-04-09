@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ApiV1",
+    "$id": "ApiV1",
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "info": {
+            "$ref": "./info.schema.json"
+        },
+        "paths": {
+            
+        },
+        "entities": {}
+    }
+}

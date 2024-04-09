@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Property Name",
+    "title": "Property Name",
+    "enum": [
+        "id",
+        "createdAt",
+        "updatedAt",
+        "deletedAt",
+        "active",
+        "username",
+        "password",
+        "category",
+        "department",
+        "description",
+        "name"
+    ]
+}

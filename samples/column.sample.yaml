@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=./../schemas/column.schema.json
+description: String Property
+inputType: text
+label: Property label
+type: string
+notInCreate: true
+notInUpdate: true
+validation:
+  type: string
+  minLength: 3
+  maxLength: 30
+  enum:
+    - First
+    - Second
+    - Third
+  example: Example string value
+  default: Default string value

@@ -1,0 +1,3 @@
+# yaml-language-server: $schema=./../schemas/info.schema.json
+email: some@gamil.com
+url: domain.com

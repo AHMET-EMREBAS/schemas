@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "Relation",
+    "title": "Relation",
+    "properties": {
+        "type": {
+            "enum": [
+                "One",
+                "Many",
+                "Owner"
+            ]
+        },
+        "target": {
+            "$ref": "./names/entity.schema.json"
+        },
+        "inputType": {
+            "description": "Input type",
+            "$ref": "./names/input-types.schema.json"
+        },
+        "notInCreate": {
+            "description": "Exclude the property from create.",
+            "type": "boolean",
+            "const": true
+        },
+        "notInUpdate": {
+            "description": "Exclude the property from update.",
+            "type": "boolean",
+            "const": true
+        }
+    }
+}
