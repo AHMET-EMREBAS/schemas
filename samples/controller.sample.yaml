@@ -1,7 +1,54 @@
 # yaml-language-server: $schema=./../schemas/rest/controller.schema.json
-api/users:
-  get:
-    parameters:
-      query:
-        type: Query
-        in: query
+name: ControllerName
+pathPrefix: api
+paths:
+  users:
+    get:
+      operationId: findEntities
+      parameters:
+        userQuery:
+          type: Query
+          in: query
+
+      responses:
+        success:
+          200:
+            body:
+              type: User
+              isArray: true
+            description: Successfully read users
+        clientError:
+          404:
+            description: When users not found
+            body:
+              type: Error
+
+  user:
+    post:
+      operationId: createEntity
+      parameters:
+        user:
+          description: Create user dto
+          type: User
+          in: body
+
+      responses:
+
+  user/{id}:
+    get:
+      responses:
+
+      operationId: findEntityOneById
+      parameters:
+        userId:
+          type: IdEntity
+          in: param
+
+    delete:
+      responses:
+
+      operationId: deleteEntityById
+      parameters:
+        userId:
+          type: IdEntity
+          in: param

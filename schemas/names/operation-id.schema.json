@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Operation ID",
+    "$id": "Operation ID",
+    "description": "Operation method name",
+    "enum": [
+        "findEntities",
+        "findEntityOneById",
+        "createEntity",
+        "updateEntityById",
+        "deleteEntityById",
+        "addEntityRelation",
+        "removeEntityRelation",
+        "setEntityRelation",
+        "unsetEntityRelation",
+        "countEntities",
+        "login",
+        "logout",
+        "signup",
+        "logout-all-devices",
+        "forgot-pasword",
+        "has-session"
+    ]
+}

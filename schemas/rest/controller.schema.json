@@ -2,36 +2,63 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Controller",
     "$id": "Controller",
-    "patternProperties": {
-        "[a-zA-Z-\/]{0,}": {
-            "properties": {
-                "get": {
-                    "$ref": "#/definitions/common"
-                },
-                "post": {
-                    "$ref": "#/definitions/common"
-                },
-                "put": {
-                    "$ref": "#/definitions/common"
-                },
-                "delete": {
-                    "$ref": "#/definitions/common"
+    "properties": {
+        "pathPrefix": {
+            "type": "string",
+            "description": "Path prefix such as api",
+            "pattern": "[a-z-]{1,}"
+        },
+        "name": {
+            "type": "string"
+        },
+        "paths": {
+            "patternProperties": {
+                "[a-zA-Z-\/]{0,}": {
+                    "properties": {
+                        "get": {
+                            "$ref": "#/definitions/common"
+                        },
+                        "post": {
+                            "$ref": "#/definitions/common"
+                        },
+                        "put": {
+                            "$ref": "#/definitions/common"
+                        },
+                        "delete": {
+                            "$ref": "#/definitions/common"
+                        }
+                    },
+                    "additionalProperties": false
                 }
-            },
-            "additionalProperties": false
+            }
         }
     },
+    "additionalProperties": false,
     "definitions": {
         "common": {
             "properties": {
+                "operationId": {
+                    "$ref": "../names/operation-id.schema.json"
+                },
                 "parameters": {
                     "patternProperties": {
                         "[a-zA-Z]{1,}": {
                             "$ref": "./parameter.schema.json"
                         }
                     }
+                },
+                "responses": {
+                    "$ref": "./response.schema.json"
                 }
-            }
+            },
+            "required": [
+                "operationId",
+                "responses"
+            ]
         }
-    }
+    },
+    "required": [
+        "name",
+        "paths"
+    ]
 }
